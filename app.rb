@@ -22,6 +22,24 @@ get '/api/prize' do
   return json response
 end
 
+get "/admin/check" do
+  @prizes = Prize.all
+  erb :admin
+end
+
+post "/admin/resetcount" do
+  prize = Prize.find(1)
+  prize.count = 0
+  prize.save!
+  prize = Prize.find(2)
+  prize.count = 0
+  prize.save!
+  prize = Prize.find(3)
+  prize.count = 0
+  prize.save!
+  redirect "/admin/check"
+end
+
 def register_result(num)
   prize = Prize.find(num + 1)
   prize.count = prize.count + 1
