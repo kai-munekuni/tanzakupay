@@ -1,0 +1,145 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  background-color: #395492;
+}
+.create-page{
+  z-index:1;
+  width:100vw;
+  height:100vh;
+  position:absolute;
+  background-color: white;
+  text-align: center;
+  background-image:url(../images/bg_top.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.result-page{
+  z-index:0;
+  width:100vw;
+  height:100vh;
+  position: absolute;
+  background-image:url(../images/bg1.png);
+  display: flex;
+}
+.create-page-title{
+  color:rgb(218, 218, 224);
+  margin-top:4vh;
+}
+.form-container{
+  text-align: center;
+  margin-top:37vh;
+}
+.textbox{
+  width: 360px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  background-image: none;
+  background-color: #ddd;
+  font-size: 16px;
+  margin-top:1vh;
+}
+.create-button{
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  border: 2px solid #395492;
+  font-size: 16px;
+  color: #395492;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+  margin-top:2vh;
+}
+.create-button:hover {
+  background-color: #395492;
+  border-color: #395492;
+  color: #FFF;
+}
+#loading{
+  position: absolute;
+  left: 48vw;
+  top: 40vh;
+  background-color: #395492;
+}
+#loader-bg {
+  background-color: #395492;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+.result-circle{
+  width:60vh;
+  height:60vh;
+  border-radius:50%;
+  background-color: rgba(191, 212, 236,0.97);
+  margin-left:17vw;
+  margin-top:17vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conjuction-label{
+  color:white;
+  font-size:2em;
+  margin-top:0.08em;
+  font-weight: lighter;
+}
+.from-label{
+  color:white;
+  font-size:2.6em;
+  margin-top:0.4em;
+}
+.award-label{
+  color:white;
+  font-size:2.6em;
+  margin-top:0.08em;
+}
+.get-label{
+  color:white;
+  font-size:2.3em;
+  margin-top:1.8em;
+}
+.error-label{
+  font-weight: lighter;
+  color: rgb(240, 112, 108);
+  font-size:0.8em;
+  margin-top:0.5em;
+  margin-bottom:0.3em;
+  display: none;
+}
+.tanzaku{
+  background-image:url(../images/tanzaku.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  height:80vh;
+  margin-left:15vw;
+  width:40vw;
+  position: relative;
+}
+
+.tanzaku-content{
+  writing-mode: vertical-rl;
+  position: absolute;
+  line-height: 2em;
+  font-size:2em;
+  letter-spacing: 0.2em;
+}
+.tanzaku-name{
+  writing-mode: vertical-rl;
+  position: absolute;
+  font-weight: lighter;
+}
