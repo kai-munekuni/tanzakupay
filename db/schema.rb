@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_06_122738) do
+ActiveRecord::Schema.define(version: 2019_07_07_012059) do
 
   create_table "prizes", force: :cascade do |t|
     t.string "name"
     t.integer "count"
+  end
+
+  create_table "records", force: :cascade do |t|
+    t.string "name"
+    t.string "content"
+    t.string "prize"
+    t.string "mentor"
   end
 
 end

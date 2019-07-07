@@ -9,3 +9,7 @@ end
 class Prize < ActiveRecord::Base
 
 end
+
+class Record < ActiveRecord::Base
+
+end

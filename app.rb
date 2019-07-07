@@ -24,6 +24,7 @@ end
 
 get "/admin/check" do
   @prizes = Prize.all
+  @records = Record.all
   erb :admin
 end
 
@@ -39,6 +40,11 @@ post "/admin/resetcount" do
   prize.save!
   redirect "/admin/check"
 end
+
+post "/post/negai" do
+  Record.create(name:params[:name],content:params[:content],mentor:params[:mentor],prize:params[:prize])
+end
+
 
 def register_result(num)
   prize = Prize.find(num + 1)

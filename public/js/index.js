@@ -37,6 +37,7 @@ window.onload = () => {
     getPrize().done(data => {
       renderPrize(data["mentor"], data["prize"]);
       registerResult(nickname, content, data["mentor"], data["prize"]);
+      postResult(nickname, content, data["mentor"], data["prize"]);
     });
     renderTanzaku(content, nickname);
   });
@@ -74,6 +75,14 @@ const getPrize = () => {
   return $.ajax({
     url: "/api/prize",
     type: "GET"
+  });
+};
+
+const postResult = (name, content, mentor, prize) => {
+  $.ajax({
+    url: "/post/negai",
+    type: "POST",
+    data: { name: name, content: content, mentor: mentor, prize: prize }
   });
 };
 
