@@ -65,10 +65,10 @@ def choose_prize
   if prize_rand_array[0]
     if ice_rand_array[0]
       return 1 if Prize.find(3).count >= 3
-      return 2
+      return 0
     else
       return 0 if Prize.find(2).count >= 7
-      return 1
+      return 0
     end
   end
   return 0
