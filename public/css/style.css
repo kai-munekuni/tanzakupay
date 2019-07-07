@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "anzumoji";
+  src: url("/fonts/APJapanesefont.ttf");
+}
+@font-face {
+  font-family: "senobi";
+  src: url("/fonts/Senobi-Gothic-Regular.ttf");
+}
 *{
   margin:0;
   padding:0;
@@ -23,6 +31,7 @@ body{
   position: absolute;
   background-image:url(../images/bg1.png);
   display: flex;
+  background-size: cover;
 }
 .create-page-title{
   color:rgb(218, 218, 224);
@@ -58,11 +67,12 @@ body{
   border-radius: 4px;
   transition: .4s;
   margin-top:2vh;
+  background: rgb(218, 218, 224);
 }
 .create-button:hover {
   background-color: #395492;
   border-color: #395492;
-  color: #FFF;
+  color: rgb(218, 218, 224);
 }
 #loading{
   position: absolute;
@@ -83,35 +93,37 @@ body{
   width:60vh;
   height:60vh;
   border-radius:50%;
-  background-color: rgba(191, 212, 236,0.97);
+  background-color: rgba(191, 212, 236,0.98);
   margin-left:17vw;
-  margin-top:17vh;
+  margin-top:16vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+.result-label{
+  font-family: "senobi";
+}
 .conjuction-label{
-  color:white;
+  color:#395492;
   font-size:2em;
   margin-top:0.08em;
   font-weight: lighter;
 }
 .from-label{
-  color:white;
+  color:#395492;
   font-size:2.6em;
   margin-top:0.4em;
 }
 .award-label{
-  color:white;
+  color:#395492;
   font-size:2.6em;
   margin-top:0.08em;
 }
 .get-label{
-  color:white;
+  color:#395492;
   font-size:2.3em;
-  margin-top:1.8em;
+  margin-top:2em;
 }
 .error-label{
   font-weight: lighter;
@@ -137,9 +149,11 @@ body{
   line-height: 2em;
   font-size:2em;
   letter-spacing: 0.2em;
+  font-family: "anzumoji";
 }
 .tanzaku-name{
   writing-mode: vertical-rl;
   position: absolute;
   font-weight: lighter;
+  font-family: "anzumoji";
 }
