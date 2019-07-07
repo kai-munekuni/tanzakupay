@@ -3,6 +3,7 @@ Bundler.require
 require 'sinatra/reloader' if development?
 require "json"
 require "./models.rb"
+require "csv"
 
 mentors_array = ["のこのこ","にーろ","かく","きぃ","しみしみ","なべ","#らぞーな","キャシー","もっちゃん","ぐっちー","まーしー","なかとも","もんすたー。","かいかい"]
 prize_array = ["なかともの飴","アイス","ハーゲンダッツ"]
@@ -71,4 +72,19 @@ def choose_prize
     end
   end
   return 0
+end
+
+
+get "/get/csv" do
+  csv1 = CSV.generate do |csv|
+    csv << Record.column_names
+    Record.all.each do |model|
+      csv << model.attributes.values_at(*Record.column_names)
+    end
+  end
+  File.open("./test.csv", 'w') do |file|
+    file.write(csv1)
+  end
+  stat = File::stat("./test.csv")
+  send_file("./test.csv", :filename => "test.csv", :length => stat.size)
 end
