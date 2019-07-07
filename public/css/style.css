@@ -23,6 +23,7 @@ body{
   background-image:url(../images/bg_top.png);
   background-size:cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .result-page{
   z-index:0;
@@ -32,6 +33,8 @@ body{
   background-image:url(../images/bg1.png);
   display: flex;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .create-page-title{
   color:rgb(218, 218, 224);
