@@ -15,15 +15,25 @@
     </tr>
     <%end%>
   </table>
-  <form action="/admin/resetcount" method="post" style="margin-top:100px;">
+  <form action="/admin/resetcount" method="post" style="margin-top:60px;">
     <input type="submit" value="カウントリセット押しちゃダメ">
   </form>
+  <table style="margin-top:140px;">
+    <tr>
+      <td>なまえ</td>
+      <td>内容</td>
+      <td>賞品</td>
+      <td>メンター</td>
+    </tr>
     <%@records.each do |record|%>
-    <%=record.name%>
-    <%=record.content%>
-    <%=record.prize%>
-    <%=record.mentor%>
-  <%end%>
+      <tr>
+        <td><%=record.name%></td>
+        <td><%=record.content%></td>
+        <td><%=record.prize%></td>
+        <td><%=record.mentor%></td>
+      </tr>
+    <%end%>
+  </table>
 
 </body>
 </html>
