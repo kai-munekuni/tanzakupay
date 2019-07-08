@@ -64,11 +64,12 @@ def choose_prize
   ice_rand_array.shuffle!
   if prize_rand_array[0]
     if ice_rand_array[0]
-      return 1 if Prize.find(3).count >= 3
-      return 0
+      return 1 if Prize.find(3).count >= 3 && !Prize.find(2).count >= 7
+      return 0 if Prize.find(3).count >= 3 && Prize.find(2).count >= 7
+      return 2
     else
       return 0 if Prize.find(2).count >= 7
-      return 0
+      return 1
     end
   end
   return 0
